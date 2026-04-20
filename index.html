@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Album</title>
+<style>
+body{
+margin:0;
+font-family:Arial;
+background:#111;
+color:white;
+}
+.gallery{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+padding:10px;
+}
+.gallery img{
+width:200px;
+height:200px;
+object-fit:cover;
+border-radius:10px;
+}
+</style>
+</head>
+<body>
+
+<h1>Our Album</h1>
+
+<div class="gallery" id="gallery">
+
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+</div>
+
+<script>
+let gallery = document.getElementById("gallery");
+
+for(let i = 4; i < 10; i++){
+let img = document.createElement("img");
+img.src = "photo" + i + ".jpg";
+gallery.appendChild(img);
+</script>
+
+</body>
+</html>
